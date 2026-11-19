@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo actividad 2</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.4s ease;
+        }
+
+        #miTexto {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="miTexto">Esperando interacción...</p>
+    <button id="miBoton">Haz clic aquí</button>
+
+    <script>
+    
+    // variables
+        const boton = document.getElementById('miBoton');
+        const texto = document.getElementById('miTexto');
+        
+        boton.addEventListener('click', function() {
+            
+            // 1
+            alert('¡Le diste clic al botón!');
+            // 2
+            texto.innerText = '¡Texto Cambiado!';
+            // 3
+            boton.style.backgroundColor = '#007D00';
+            // 4
+            document.body.style.backgroundColor = '#dcfce7';
+            // 5
+            texto.style.color = '#007D00';
+        });
+    </script>
+
+</body>
+</html>
